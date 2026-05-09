@@ -13,15 +13,15 @@ test('renders Vite + React text', () => {
 test('increments count on button click', () => {
   render(<App />);
 
-  const buttonElement = screen.getByText(/Count is 0/i);
+  const buttonElement = screen.getByText(/Count + 0/i);
 
   expect(buttonElement).toBeInTheDocument();
 
   fireEvent.click(buttonElement);
 
-  expect(buttonElement).toHaveTextContent('Count is 1');
+  expect(buttonElement).toHaveTextContent('Count + 1');
 
   fireEvent.click(buttonElement);
 
-  expect(buttonElement).toHaveTextContent('Count is 2');
+  expect(buttonElement).toHaveTextContent('Count + 2');
 });
